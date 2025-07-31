@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> El Mundo Interactivo de los Ésteres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg" href="logo-ico.svg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-slate-700">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <img src="logo-ico.svg" alt="">
+                <div class="text-2xl font-bold text-teal-700">
+                    Química de los Ésteres
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#definicion" class="text-slate-600 hover:text-teal-600 transition">Definición</a>
+                    <a href="#reaccion" class="text-slate-600 hover:text-teal-600 transition">Reacción</a>
+                    <a href="#aromas" class="text-slate-600 hover:text-teal-600 transition">Aromas</a>
+                    <a href="#aplicaciones" class="text-slate-600 hover:text-teal-600 transition">Aplicaciones</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section class="text-center mb-20">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">El Mundo Interactivo de los Ésteres</h1>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">Una exploración de los compuestos que dan aroma a las frutas y son clave en la industria moderna.</p>
+            <p>Integrantes: Yasmin Sánchez y </p>
+        </section>
+
+        <section id="definicion" class="mb-20 scroll-mt-20">
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                <h2 class="text-3xl font-bold text-teal-700 mb-4">1. ¿Qué es un Éster?</h2>
+                <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
+                    <p>Un <strong>éster</strong> es un compuesto orgánico que se forma a partir de la reacción entre un <strong>ácido carboxílico</strong> y un <strong>alcohol</strong>. En esta reacción, el grupo hidroxilo (-OH) del ácido es reemplazado por un grupo alcoxi (-OR') del alcohol. Esta estructura única es la que les confiere sus propiedades características.</p>
+                    <p>La cualidad más famosa de los ésteres de bajo peso molecular es su <strong>olor agradable y afrutado</strong>. Son los responsables de los aromas naturales de muchas frutas y flores, como plátanos, piñas y rosas.</p>
+                    <div class="mt-6 bg-teal-50 border-l-4 border-teal-500 p-6 rounded-r-lg">
+                        <p class="font-semibold text-teal-800">Concepto Clave:</p>
+                        <div class="flex items-center justify-center flex-wrap gap-4 mt-4 text-center">
+                            <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-mono text-blue-600">Ácido Carboxílico</span></div>
+                            <span class="text-2xl font-bold text-slate-500">+</span>
+                            <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-mono text-red-600">Alcohol</span></div>
+                            <span class="text-2xl font-bold text-slate-500">→</span>
+                            <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-mono text-teal-700">Éster</span></div>
+                             <span class="text-2xl font-bold text-slate-500">+</span>
+                            <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-mono text-gray-600">Agua</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reaccion" class="mb-20 scroll-mt-20">
+             <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                <h2 class="text-3xl font-bold text-teal-700 mb-2">2. La Reacción: Esterificación Interactiva</h2>
+                <p class="text-lg text-slate-600 mb-6">La <strong>esterificación</strong> es la reacción química que produce un éster. Es una reacción de condensación reversible que necesita un catalizador ácido (como H₂SO₄) para acelerarse. ¡Prueba a crear tu propio éster seleccionando un ácido y un alcohol!</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="acid-selector" class="block text-sm font-medium text-slate-700 mb-1">Elige un Ácido Carboxílico:</label>
+                        <select id="acid-selector" class="w-full p-2 border border-slate-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500">
+                        </select>
+                    </div>
+                    <div>
+                        <label for="alcohol-selector" class="block text-sm font-medium text-slate-700 mb-1">Elige un Alcohol:</label>
+                        <select id="alcohol-selector" class="w-full p-2 border border-slate-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-4">Resultado de la Reacción:</h3>
+                    <div class="font-mono text-sm md:text-lg text-slate-700 flex flex-wrap items-center justify-center gap-2">
+                        <span id="acid-formula" class="text-blue-600"></span>
+                        <span>+</span>
+                        <span id="alcohol-formula" class="text-red-600"></span>
+                        <span>⇌</span>
+                        <span id="ester-formula" class="text-teal-700 font-bold"></span>
+                        <span>+</span>
+                        <span class="text-gray-600">H₂O</span>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-lg">Has formado: <strong id="ester-name" class="text-teal-800"></strong></p>
+                        <p class="text-md text-slate-600">Conocido por su olor a: <strong id="ester-aroma" class="text-slate-800"></strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aromas" class="mb-20 scroll-mt-20">
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                <h2 class="text-3xl font-bold text-teal-700 mb-2">3. Un Universo de Aromas</h2>
+                <p class="text-lg text-slate-600 mb-6">Muchos de los olores que asociamos con las frutas provienen de ésteres específicos. Este gráfico muestra algunos ejemplos comunes. Pasa el cursor sobre las barras para descubrir qué éster es responsable de cada aroma característico.</p>
+                <div class="chart-container">
+                    <canvas id="aromasChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="aplicaciones" class="scroll-mt-20">
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                <h2 class="text-3xl font-bold text-teal-700 mb-2">4. Aplicaciones en Nuestra Vida</h2>
+                <p class="text-lg text-slate-600 mb-8">Más allá de los buenos olores, los ésteres son increíblemente versátiles y fundamentales en numerosas industrias. Desde la ropa que vestimos hasta los medicamentos que nos curan, los ésteres están presentes en muchos aspectos de la vida moderna.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">🍓</span>Aromatizantes</h3>
+                        <p>Base de sabores y olores artificiales en alimentos, bebidas y perfumes.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">🧪</span>Solventes</h3>
+                        <p>Disuelven otras sustancias, siendo clave en pinturas, lacas y adhesivos.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">🧵</span>Polímeros</h3>
+                        <p>Son los bloques de construcción de plásticos como el poliéster (PET) para botellas y ropa.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">💊</span>Fármacos</h3>
+                        <p>Principios activos de medicamentos tan importantes como la Aspirina o la nitroglicerina.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">⛽</span>Biocombustibles</h3>
+                        <p>El biodiésel es una mezcla de ésteres producidos a partir de aceites vegetales.</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center"><span class="text-2xl mr-3">🐝</span>Feromonas</h3>
+                        <p>Muchos insectos usan ésteres como señales químicas para comunicarse o atraer parejas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p>Aplicación interactiva creada para explorar el fascinante mundo de la química de los ésteres.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
